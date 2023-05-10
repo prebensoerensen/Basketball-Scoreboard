@@ -11,12 +11,12 @@
       <section class="team">
         <h3>HOME</h3>
         <div class="score">
-          <h1 id="homescr">0</h1>
+          <h1 id="homescreen">0</h1>
         </div>
         <div class="score-btns">
-          <button class="btns" onclick="homeadd1()">+1</button>
-          <button class="btns" onclick="homeadd2()">+2</button>
-          <button class="btns" onclick="homeadd3()">+3</button>
+          <button class="btns" onclick="scoreAdd(homeScore, homeScreen, 1)">+1</button>
+          <button class="btns" onclick="scoreAdd(homeScore, homeScreen, 2)">+2</button>
+          <button class="btns" onclick="scoreAdd(homeScore, homeScreen, 3)">+3</button>
         </div>
         <div class="score-btns">
           <button class="btns" onclick="homeadd1()">-1</button>
@@ -34,15 +34,15 @@
       <section class="mid">
         <div class="clock">
           <h2>TIME</h2>
-          <h3><span id="minutes">12</span>:<span id="seconds">00</span></h3>
+          <h3 id="timer-el">12:00</h3>
           <div class="clock-btns">
-            <button id="start-time">START</button>
-            <button id="stop-time">STOP</button>
+            <button id="start-time" onclick="startTimer()">START</button>
+            <button id="stop-time" onclick="pauseTimer()">STOP</button>
           </div>
         </div>
         <div class="period">
           <h2>PERIOD</h2>
-          <h3>1</h3>
+          <h3 id="period-screen">1</h3>
           <button class="btns">+1</button>
         </div>
         <button id="newgame" onclick="newgame()">NEW GAME</button>
@@ -51,7 +51,7 @@
       <section class="team">
         <h3>GUEST</h3>
         <div class="score">
-          <h1 id="guestscr">0</h1>
+          <h1 id="guestscreen">0</h1>
         </div>
         <div class="score-btns">
           <button class="btns" onclick="guestadd1()">+1</button>

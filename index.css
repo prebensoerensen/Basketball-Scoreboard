@@ -8,6 +8,10 @@ body {
   src: url("DigitalDismay.otf");
 }
 
+h2 {
+  margin: 0.3rem;
+}
+
 h3 {
   margin: 0 auto;
   font-size: 2rem;
@@ -38,7 +42,7 @@ h3 {
   border-radius: 0.3rem;
   font-size: 2rem;
   padding: 0.6rem;
-  margin: 1rem auto;
+  margin: .5rem auto .3rem auto;
   font-family: digdis;
 }
 
@@ -54,7 +58,6 @@ h3 {
   background: #1b244a;
   font-family: digdis;
   padding: 0.3rem 0;
-  margin: .2rem;
 }
 
 .btns:hover,
@@ -90,12 +93,9 @@ h3 {
 .mid {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-}
-
-.clock h2 {
-  margin: 0.3rem;
+  gap: 1rem;
 }
 
 .clock h3, .fouls h3, .period h3 {
@@ -115,6 +115,11 @@ h3 {
   gap: 0.3rem;
 }
 
+#period-screen {
+  width: 3.5rem;
+  margin: 0 auto .3rem auto;
+}
+
 #newgame,
 .clock-btns button {
   background: #1b244a;
@@ -124,4 +129,8 @@ h3 {
   margin: 0.3rem;
   font-weight: bold;
   padding-top: 0.15rem;
+}
+
+#newgame {
+  padding: .4rem .8rem;
 }
