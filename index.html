@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="team">
+        <h3>HOME</h3>
+        <div class="score">
+          <h1 id="homescr">0</h1>
+        </div>
+        <div class="score-btns">
+          <button class="btns" onclick="homeadd1()">+1</button>
+          <button class="btns" onclick="homeadd2()">+2</button>
+          <button class="btns" onclick="homeadd3()">+3</button>
+        </div>
+        <div class="score-btns">
+          <button class="btns" onclick="homeadd1()">-1</button>
+          <button class="btns" onclick="homeadd2()">-2</button>
+          <button class="btns" onclick="homeadd3()">-3</button>
+        </div>
+        <div class="fouls">
+          <h4>FOULS</h4>
+          <h3>0</h3>
+          <button class="btns">-1</button>
+          <button class="btns">+1</button>
+        </div>
+      </section>
+
+      <section class="mid">
+        <div class="clock">
+          <h2>TIME</h2>
+          <h3><span id="minutes">12</span>:<span id="seconds">00</span></h3>
+          <div class="clock-btns">
+            <button id="start-time">START</button>
+            <button id="stop-time">STOP</button>
+          </div>
+        </div>
+        <div class="period">
+          <h2>PERIOD</h2>
+          <h3>1</h3>
+          <button class="btns">+1</button>
+        </div>
+        <button id="newgame" onclick="newgame()">NEW GAME</button>
+      </section>
+
+      <section class="team">
+        <h3>GUEST</h3>
+        <div class="score">
+          <h1 id="guestscr">0</h1>
+        </div>
+        <div class="score-btns">
+          <button class="btns" onclick="guestadd1()">+1</button>
+          <button class="btns" onclick="guestadd2()">+2</button>
+          <button class="btns" onclick="guestadd3()">+3</button>
+        </div>
+        <div class="score-btns">
+          <button class="btns" onclick="guestadd1()">-1</button>
+          <button class="btns" onclick="guestadd2()">-2</button>
+          <button class="btns" onclick="guestadd3()">-3</button>
+        </div>
+        <div class="fouls">
+          <h4>FOULS</h4>
+          <h3>0</h3>
+          <button class="btns">-1</button>
+          <button class="btns">+1</button>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
