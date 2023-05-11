@@ -14,14 +14,14 @@
           <h1 id="homescreen">0</h1>
         </div>
         <div class="score-btns">
-          <button class="btns" onclick="scoreAdd(homeScore, homeScreen, 1)">+1</button>
-          <button class="btns" onclick="scoreAdd(homeScore, homeScreen, 2)">+2</button>
-          <button class="btns" onclick="scoreAdd(homeScore, homeScreen, 3)">+3</button>
+          <button class="btns" onclick="updateScore('home', 1)">+1</button>
+          <button class="btns" onclick="updateScore('home', 2)">+2</button>
+          <button class="btns" onclick="updateScore('home', 3)">+3</button>
         </div>
         <div class="score-btns">
-          <button class="btns" onclick="homeadd1()">-1</button>
-          <button class="btns" onclick="homeadd2()">-2</button>
-          <button class="btns" onclick="homeadd3()">-3</button>
+          <button class="btns" onclick="updateScore('home', -1)">-1</button>
+          <button class="btns" onclick="updateScore('home', -2)">-2</button>
+          <button class="btns" onclick="updateScore('home', -3)">-3</button>
         </div>
         <div class="fouls">
           <h4>FOULS</h4>
@@ -54,14 +54,14 @@
           <h1 id="guestscreen">0</h1>
         </div>
         <div class="score-btns">
-          <button class="btns" onclick="guestadd1()">+1</button>
-          <button class="btns" onclick="guestadd2()">+2</button>
-          <button class="btns" onclick="guestadd3()">+3</button>
+          <button class="btns" onclick="updateScore('guest', 1)">+1</button>
+          <button class="btns" onclick="updateScore('guest', 1)">+2</button>
+          <button class="btns" onclick="updateScore('guest', 1)">+3</button>
         </div>
         <div class="score-btns">
-          <button class="btns" onclick="guestadd1()">-1</button>
-          <button class="btns" onclick="guestadd2()">-2</button>
-          <button class="btns" onclick="guestadd3()">-3</button>
+          <button class="btns" onclick="updateScore('guest', -1)">-1</button>
+          <button class="btns" onclick="updateScore('guest', -2)">-2</button>
+          <button class="btns" onclick="updateScore('guest', -3)">-3</button>
         </div>
         <div class="fouls">
           <h4>FOULS</h4>
