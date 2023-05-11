@@ -1,3 +1,8 @@
+:root{
+  /* Colors */
+  --scoreAndTime-font-color: #f94f6d
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -36,7 +41,7 @@ h3 {
   height: 4rem;
   width: 6rem;
   background: #080001;
-  color: #f94f6d;
+  color: var(--scoreAndTime-font-color);
   text-align: center;
   border: 0.1rem solid #9aabd8;
   border-radius: 0.3rem;
@@ -102,7 +107,7 @@ h3 {
   background: #080001;
   border: 0.1rem solid #9aabd8;
   border-radius: 0.3rem;
-  color: #f94f6d;
+  color: var(--scoreAndTime-font-color);
   font-family: digdis;
   font-size: 2.5rem;
   margin: 0;
