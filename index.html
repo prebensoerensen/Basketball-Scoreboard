@@ -25,9 +25,9 @@
         </div>
         <div class="fouls">
           <h4>FOULS</h4>
-          <h3>0</h3>
-          <button class="btns">-1</button>
-          <button class="btns">+1</button>
+          <h3 id="fouls-home-el">0</h3>
+          <button class="btns" onclick="updateFouls('home', -1)">-</button>
+          <button class="btns" onclick="updateFouls('home', 1)">+</button>
         </div>
       </section>
 
@@ -42,10 +42,10 @@
         </div>
         <div class="period">
           <h2>PERIOD</h2>
-          <h3 id="period-screen">1</h3>
-          <button class="btns">+1</button>
+          <h3 id="period-el">1</h3>
+          <button class="btns" onclick="updatePeriod()">+</button>
         </div>
-        <button id="newgame" onclick="newgame()">NEW GAME</button>
+        <button id="newgame" onclick="newGame()">NEW GAME</button>
       </section>
 
       <section class="team">
@@ -55,8 +55,8 @@
         </div>
         <div class="score-btns">
           <button class="btns" onclick="updateScore('guest', 1)">+1</button>
-          <button class="btns" onclick="updateScore('guest', 1)">+2</button>
-          <button class="btns" onclick="updateScore('guest', 1)">+3</button>
+          <button class="btns" onclick="updateScore('guest', 2)">+2</button>
+          <button class="btns" onclick="updateScore('guest', 3)">+3</button>
         </div>
         <div class="score-btns">
           <button class="btns" onclick="updateScore('guest', -1)">-1</button>
@@ -65,9 +65,9 @@
         </div>
         <div class="fouls">
           <h4>FOULS</h4>
-          <h3>0</h3>
-          <button class="btns">-1</button>
-          <button class="btns">+1</button>
+          <h3 id="fouls-guest-el">0</h3>
+          <button class="btns" onclick="updateFouls('guest', -1)">-</button>
+          <button class="btns" onclick="updateFouls('guest', 1)">+</button>
         </div>
       </section>
     </main>

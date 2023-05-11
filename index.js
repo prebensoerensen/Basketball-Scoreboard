@@ -1,7 +1,13 @@
 let homeScore = 0;
 let guestScore = 0;
-const homeScreen = document.getElementById("homescreen");
-const guestScreen = document.getElementById("guestscreen");
+let foulsHome = 0;
+let foulsGuest = 0;
+let period = 1;
+const homeScreen = document.getElementById('homescreen');
+const guestScreen = document.getElementById('guestscreen');
+const foulsHomeEl = document.getElementById('fouls-home-el');
+const foulsGuestEl = document.getElementById('fouls-guest-el');
+const periodEl = document.getElementById('period-el');
 const timerEl = document.getElementById("timer-el");
 
 
@@ -9,45 +15,69 @@ function updateScore(team, points) {
   if (team === 'home') {
     homeScore += points;
 	if (homeScore < 0) {
-		homeScore = 0
+		homeScore = 0;
 	}
 	homeScreen.textContent = homeScore;
   }  if (team === 'guest') {
     guestScore += points;
 	if (guestScore < 0) {
-		guestScore = 0
+		guestScore = 0;
 	}
     guestScreen.textContent = guestScore;
   }
-  negativeScore()
-  numberhighlight();
+  numberHighlight();
 }
 
-function negativeScore() {
-	
+function updateFouls(team, value) {
+	if (team === 'home') {
+		foulsHome += value;
+		if (foulsHome < 0) {
+			foulsHome = 0;
+		}
+		foulsHomeEl.textContent = foulsHome;
+	} if (team === 'guest') {
+		foulsGuest += value;
+		if (foulsGuest < 0) {
+			foulsGuest = 0;
+		}
+		foulsGuestEl.textContent = foulsGuest;
+	}
 }
 
-function newgame() {
+function updatePeriod() {
+	if (period < 4) {
+		period += 1;
+	}
+	periodEl.textContent = period;
+}
+
+function newGame() {
   homeScore = 0;
   guestScore = 0;
+  foulsHome = 0;
+  foulsGuest = 0;
+  period = 1;
   homeScreen.textContent = homeScore;
   guestScreen.textContent = guestScore;
-  numberhighlight();
+  foulsHomeEl.textContent = foulsHome;
+  foulsGuestEl.textContent = foulsGuest;
+  periodEl.textContent = period;
+  numberHighlight();
   resetTimer();
 }
 
-function numberhighlight() {
+function numberHighlight() {
   if (homeScore > guestScore) {
-    homeScreen.style.color = "#02c902";
-    guestScreen.style.color = "#F94F6D";
+    homeScreen.style.color = '#02c902';
+    guestScreen.style.color = '#F9F6D';
   }
   if (homeScore < guestScore) {
-    homeScreen.style.color = "#F94F6D";
-    guestScreen.style.color = "#02c902";
+    homeScreen.style.color = '#F94F6D';
+    guestScreen.style.color = '#02c902';
   }
   if (homeScore == guestScore) {
-    homeScreen.style.color = "#F94F6D";
-    guestScreen.style.color = "#F94F6D";
+    homeScreen.style.color = '#F94F6D';
+    guestScreen.style.color = '#F94F6D';
   }
 }
 
@@ -84,10 +114,10 @@ function startTimer() {
 
 		if (totalSeconds < 0) {
 			clearInterval(timerInterval);
-			timerEl.innerHTML = "00:00";
+			timerEl.innerHTML = '00:00';
 			} else if (totalSeconds === 0) {
 			clearInterval(timerInterval);
-			timerEl.innerHTML = "00:00";
+			timerEl.innerHTML = '00:00';
 		}
 	}, 1000);
 }

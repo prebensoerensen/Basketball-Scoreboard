@@ -100,10 +100,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
 }
 
-.clock h3, .fouls h3, .period h3 {
+.clock h3, .fouls h3, #period-el {
   background: #080001;
   border: 0.1rem solid #9aabd8;
   border-radius: 0.3rem;
@@ -120,7 +120,7 @@ h3 {
   gap: 0.3rem;
 }
 
-#period-screen {
+#period-el {
   width: 3.5rem;
   margin: 0 auto .3rem auto;
 }
