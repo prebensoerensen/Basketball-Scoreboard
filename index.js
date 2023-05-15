@@ -49,6 +49,7 @@ function updatePeriod() {
 		period += 1;
 	}
 	periodEl.textContent = period;
+	resetTimer()
 }
 
 function newGame() {
