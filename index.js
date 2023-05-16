@@ -85,7 +85,7 @@ function numberHighlight() {
 // time in minutes
 const initialTime = 12;
 
-let totalSeconds = initialTime * 60;
+let totalSeconds = (initialTime * 60) - 1;
 let timerInterval;
 
 // adding 0 to time if there's only 1 digit
@@ -103,23 +103,20 @@ function startTimer() {
 
 	timerInterval = setInterval(() => {
 
+		if (totalSeconds === 0) {
+			clearInterval(timerInterval);
+		}
+		
 		const minutesLeft = Math.floor(totalSeconds / 60);
 		const secondsLeft = totalSeconds % 60;
 
 		const formatMinutes = formatTime(minutesLeft);
 		const formatSeconds = formatTime(secondsLeft);
 
-		timerEl.innerHTML = `${formatMinutes}:${formatSeconds}`;
+		timerEl.textContent = `${formatMinutes}:${formatSeconds}`;
 
 		totalSeconds--;
 
-		if (totalSeconds < 0) {
-			clearInterval(timerInterval);
-			timerEl.innerHTML = '00:00';
-			} else if (totalSeconds === 0) {
-			clearInterval(timerInterval);
-			timerEl.innerHTML = '00:00';
-		}
 	}, 1000);
 }
 
@@ -132,5 +129,5 @@ function resetTimer() {
 	totalSeconds = initialTime * 60;
 	const formatMinutes = formatTime(initialTime);
 	const formatSeconds = formatTime(0);
-	timerEl.innerHTML = `${formatMinutes}:${formatSeconds}`;
+	timerEl.textContent = `${formatMinutes}:${formatSeconds}`;
 }
